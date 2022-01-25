@@ -4,7 +4,7 @@ import SingleColor from './SingleColor'
 import Values from 'values.js'
 
 function App() {
-  const [colors, setColors] = useState([])
+  const [colors, setColors] = useState(new Values('#ff0b23').all(10))
   const [value, setValue] = useState('')
   const [error, setError] = useState(false)
 
@@ -28,7 +28,7 @@ function App() {
             className={error ? 'error' : null}
             type="text"
             name="color"
-            id=""
+            placeholder="#ff0b23"
             value={value}
             onChange={(e) => {
               setValue(e.target.value)
