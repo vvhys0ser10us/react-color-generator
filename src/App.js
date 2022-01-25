@@ -38,7 +38,12 @@ function App() {
           </button>
         </form>
       </section>
-      <section className="colors"></section>
+      <section className="colors">
+        {colors.map((item, index) => {
+          console.log(item)
+          return <SingleColor key={index} {...item} index={index}></SingleColor>
+        })}
+      </section>
     </>
   )
 }
