@@ -12,6 +12,7 @@ function App() {
     e.preventDefault()
     try {
       let list = new Values(value).all(10)
+      setError(false)
       setColors(list)
     } catch (error) {
       setError(true)
